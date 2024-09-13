@@ -1,12 +1,4 @@
 "use strict";
-/*import pool from '../../database';
-import { QueryResult } from 'pg';
-
-
-export const getAllPorductsDB = async (): Promise<QueryResult> => {
-    return await pool.query('SELECT * FROM productos');
-};
-*/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {

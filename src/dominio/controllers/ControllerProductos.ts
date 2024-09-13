@@ -1,5 +1,4 @@
 import {Request, Response} from 'express'
-import { QueryResult } from 'pg';
 import { GetPorductsServices } from '../servicio/ServicesProductos';
 
 
