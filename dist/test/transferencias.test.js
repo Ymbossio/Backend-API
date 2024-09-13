@@ -16,7 +16,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const supertest_1 = __importDefault(require("supertest"));
 const index_1 = __importDefault(require("../index")); // Ajusta la ruta según tu estructura
 const crypto_1 = __importDefault(require("crypto"));
-const simulatedata_1 = __importDefault(require("../simulatedata"));
+const simulatedata_1 = __importDefault(require("../mock/simulatedata"));
 const sequelize_typescript_1 = require("sequelize-typescript");
 const transferencias_1 = require("../model/transferencias");
 const sequelizeTest = new sequelize_typescript_1.Sequelize({

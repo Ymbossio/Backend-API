@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateTransferenciasDB, UpdateTransferenciasDB } from "../repositories/RepTransferencias";
+import { CreateTransferenciasDB } from "../repositories/RepTransferencias";
 import TransferenciaData from "data";
 
 
@@ -60,9 +60,4 @@ export const CreateTransferServices = async (data: TransferenciaData)=> {
       throw error; 
     }
 
-}
-
-export const UpdateTransferServices = async (transaction_id: string, amount_in_cents: string, reference: string, customer_email: string, currency: string, payment_method_type: string, redirect_url: string, status: string, shipping_address: string, payment_link_id: string, payment_source_id: string, environment: string, signature_properties: string, signature_checksum: string, timestamp: string, sent_at: string) => {
-    
-    return await UpdateTransferenciasDB(amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id);
 }

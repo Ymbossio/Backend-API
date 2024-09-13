@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateTransferServices = exports.CreateTransferServices = exports.mapTransferenciaDataToModel = void 0;
+exports.CreateTransferServices = exports.mapTransferenciaDataToModel = void 0;
 const RepTransferencias_1 = require("../repositories/RepTransferencias");
 // Función para mapear TransferenciaData a las propiedades del modelo Sequelize
 const mapTransferenciaDataToModel = (data) => {
@@ -66,7 +66,3 @@ const CreateTransferServices = (data) => __awaiter(void 0, void 0, void 0, funct
     }
 });
 exports.CreateTransferServices = CreateTransferServices;
-const UpdateTransferServices = (transaction_id, amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at) => __awaiter(void 0, void 0, void 0, function* () {
-    return yield (0, RepTransferencias_1.UpdateTransferenciasDB)(amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id);
-});
-exports.UpdateTransferServices = UpdateTransferServices;

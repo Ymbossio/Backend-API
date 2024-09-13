@@ -8,12 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateTransferenciasDB = exports.CreateTransferenciasDB = exports.mapTransferenciaDataToModel = void 0;
-const database_1 = __importDefault(require("../../database"));
+exports.CreateTransferenciasDB = exports.mapTransferenciaDataToModel = void 0;
 const transferencias_1 = require("../../model/transferencias");
 // Función para mapear TransferenciaData a las propiedades del modelo Sequelize
 const mapTransferenciaDataToModel = (data) => {
@@ -71,8 +67,3 @@ const CreateTransferenciasDB = (data) => __awaiter(void 0, void 0, void 0, funct
     }
 });
 exports.CreateTransferenciasDB = CreateTransferenciasDB;
-const UpdateTransferenciasDB = (transaction_id, amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at) => __awaiter(void 0, void 0, void 0, function* () {
-    return yield database_1.default.query(`UPDATE transferencias SET amount_in_cents = $1, reference = $2, customer_email = $3, currency = $4, payment_method_type = $5, redirect_url = $6, status = $7, shipping_address = $8, payment_link_id = $9, payment_source_id = $10, environment = $11, signature_properties = $12, signature_checksum = $13, timestamp = $14, sent_at = $15
-        WHERE transaction_id = $16`, [amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id]);
-});
-exports.UpdateTransferenciasDB = UpdateTransferenciasDB;

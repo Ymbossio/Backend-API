@@ -4,7 +4,7 @@ import crypto from 'crypto';
 
 
 //importamos los servicios .
-import { CreateTransferServices, UpdateTransferServices } from '../servicio/ServicesTransferencias';
+import { CreateTransferServices } from '../servicio/ServicesTransferencias';
 
 interface Params {
     id: string;
@@ -73,21 +73,3 @@ export const CreateRegister = async (req: Request, res: Response): Promise<Respo
         throw error; 
     }
 };
-
-
-
-
-export const UpdateRegister = async (req: Request, res: Response): Promise<Response> =>{
-    try {
-        const id = parseInt(req.params.id)
-        const { amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id } = req.body;
-
-        const response: QueryResult = await UpdateTransferServices(amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id);
-        
-        return res.json({message: "Update successfully"})
-
-    }catch(error){
-        console.error(error);
-        return res.status(500).json('Internal Server Error');
-    }
-}

@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateRegister = exports.CreateRegister = void 0;
+exports.CreateRegister = void 0;
 const crypto_1 = __importDefault(require("crypto"));
 //importamos los servicios .
 const ServicesTransferencias_1 = require("../servicio/ServicesTransferencias");
@@ -76,16 +76,3 @@ const CreateRegister = (req, res) => __awaiter(void 0, void 0, void 0, function*
     }
 });
 exports.CreateRegister = CreateRegister;
-const UpdateRegister = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const id = parseInt(req.params.id);
-        const { amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id } = req.body;
-        const response = yield (0, ServicesTransferencias_1.UpdateTransferServices)(amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id);
-        return res.json({ message: "Update successfully" });
-    }
-    catch (error) {
-        console.error(error);
-        return res.status(500).json('Internal Server Error');
-    }
-});
-exports.UpdateRegister = UpdateRegister;

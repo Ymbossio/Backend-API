@@ -14,7 +14,7 @@ app.use(product);
 
 
 
-const PORT = process.env.PORT_SERVER || 4056;
+const PORT = process.env.PORT_SERVER || 8080;
 
 async function startServer() {
   try {

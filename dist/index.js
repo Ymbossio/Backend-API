@@ -23,7 +23,7 @@ app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use(index_1.default);
 app.use(productos_1.default);
-const PORT = process.env.PORT_SERVER || 4056;
+const PORT = process.env.PORT_SERVER || 8080;
 function startServer() {
     return __awaiter(this, void 0, void 0, function* () {
         try {

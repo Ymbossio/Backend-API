@@ -1,9 +1,6 @@
-    import pool from '../../database';
-    import { QueryResult } from 'pg';
-    import TransferenciaData from 'data';
-    import { Transferencia } from '../../model/transferencias';
-    import  create  from 'sequelize';
-
+import { QueryResult } from 'pg';
+import TransferenciaData from 'data';
+import { Transferencia } from '../../model/transferencias';
 
 // Función para mapear TransferenciaData a las propiedades del modelo Sequelize
 export const mapTransferenciaDataToModel = (data: TransferenciaData): any => {
@@ -61,13 +58,4 @@ export const CreateTransferenciasDB = async (data: TransferenciaData): Promise<T
     } catch (error) {
         throw error;
     }
-};
-
-export const UpdateTransferenciasDB = async (transaction_id: string, amount_in_cents: string, reference: string, customer_email: string, currency: string, payment_method_type: string, redirect_url: string, status: string, shipping_address: string, payment_link_id: string, payment_source_id: string, environment: string, signature_properties: string, signature_checksum: string, timestamp: string, sent_at: string
-): Promise<QueryResult> => {
-    return await pool.query(
-        `UPDATE transferencias SET amount_in_cents = $1, reference = $2, customer_email = $3, currency = $4, payment_method_type = $5, redirect_url = $6, status = $7, shipping_address = $8, payment_link_id = $9, payment_source_id = $10, environment = $11, signature_properties = $12, signature_checksum = $13, timestamp = $14, sent_at = $15
-        WHERE transaction_id = $16`,
-        [amount_in_cents, reference, customer_email, currency, payment_method_type, redirect_url, status, shipping_address, payment_link_id, payment_source_id, environment, signature_properties, signature_checksum, timestamp, sent_at, transaction_id]
-    );
 };
