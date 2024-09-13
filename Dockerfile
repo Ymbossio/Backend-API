@@ -11,7 +11,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 # Etapa de construcción para reducir el tamaño de la imagen final
-FROM base as build
+FROM base as dist
 
 # Copiar los archivos de configuración de la aplicación
 COPY package*.json ./
