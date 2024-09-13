@@ -1,0 +1,38 @@
+
+const mockTransactionData = {
+  transaction_id: "193526-1711054232-47541",
+  created_at: new Date("2024-03-04T22:25:07.757Z"),
+  finalized_at: new Date("2024-03-04T22:25:08.351Z"),
+  amount_in_cents: 4590000,
+  reference: "REGISTRO-INDIVIDUAL-DE-COMPETIDORES-FUNDEPORTIVA-Evento-Ciclismo-21-03-2024-15:49:34.566",
+  customer_email: "prueba-integracion@gmail.com",
+  currency: "COP",
+  payment_method_type: "CARD",
+  bin: "424242",
+  name: "VISA-4242",
+  brand: "VISA",
+  exp_year: "24",
+  card_type: "CREDIT",
+  exp_month: "02",
+  last_four: "4242",
+  card_holder: "MASTERCARD",
+  is_three_ds: true,
+  unique_code: "bbf3f7907db26da85ab4d57213a668ba9d519a3f773ff63b2ae7003393da95bc",
+  current_step: "AUTHENTICATION",
+  current_step_status: "COMPLETED",
+  external_identifier: "NqJDJbSmFZ",
+  processor_response_code: "00",
+  token: "tok_test_93526_0e93EdADa9191C14ed3ba7015b78bc01",
+  installments: 1,
+  status: "APPROVED",
+  full_name: "TEST VALUE",
+  phone_number: "+573991111111",
+  legal_id_type: "CC",
+  legal_id: "12345678",
+  sent_at: new Date("2024-03-04T22:25:08.404Z"),
+  timestamp: 1709591108,
+  checksum: "838351cfb8c7c86f840feb30ad8bfa1d28dfbda59b372b6ef3ca055184bde115",
+  environment: "test"
+};
+
+  export default mockTransactionData;
