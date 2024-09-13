@@ -16,6 +16,6 @@ module.exports = {
   coverageDirectory: 'coverage',
   collectCoverage: true,
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1', // Ajusta esto según la configuración de tu tsconfig
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
 };
