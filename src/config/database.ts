@@ -18,13 +18,13 @@ const dialectOptions = process.env.NODE_ENV !== 'development'
 
 
 const sequelize = new Sequelize({
-  dialectOptions: dialectOptions['postgres'] || {},
   dialect: process.env.DIALECT as 'postgres',  
   host: process.env.HOST,
   username: process.env.USER,
   password: process.env.PASSWORD,
-  port: parseInt(process.env.PORT || '8080', 10),  
+  port: parseInt(process.env.PORT || '5433', 10),  
   database: process.env.DATABASE,
+  dialectOptions: dialectOptions['postgres'] || {},
   models: [Producto, Transferencia],
   logging: true,
 });
