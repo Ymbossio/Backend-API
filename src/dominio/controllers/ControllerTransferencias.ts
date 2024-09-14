@@ -6,6 +6,8 @@ import { createTransferServices } from '../servicio/ServicesTransferencias';
 export const createTransfer = async (req: Request, res: Response): Promise<Response> => {
     const result = req.body;
 
+    console.log(result);
+    
     const transferenciaData = {
         transactionId: result?.data?.transaction?.id,
         createdAt: result?.data?.transaction?.created_at,

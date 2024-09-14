@@ -28,6 +28,7 @@ const productos_1 = require("../model/productos");
 const transferencias_1 = require("../model/transferencias");
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
+const port = process.env.NODE_PORT ? parseInt(process.env.NODE_PORT, 10) : undefined;
 const dialectOptions = process.env.NODE_ENV !== 'development'
     ? {
         postgres: {
@@ -39,12 +40,12 @@ const dialectOptions = process.env.NODE_ENV !== 'development'
     }
     : {};
 const sequelize = new sequelize_typescript_1.Sequelize({
-    dialect: process.env.DIALECT,
-    host: 'dpg-cri9vm5ds78s73alvms0-a.oregon-postgres.render.com',
-    username: 'root',
-    password: 'mfCX2hPFWMKErc0W055xhkYOqWBtZ84z',
-    port: 5432,
-    database: 'backend_4am0',
+    dialect: process.env.NODE_DIALECT,
+    host: process.env.NODE_HOST,
+    username: process.env.NODE_USER,
+    password: process.env.NODE_PASSWORD,
+    port: port,
+    database: process.env.NODE_DATABASE,
     dialectOptions: dialectOptions['postgres'] || {},
     models: [productos_1.Producto, transferencias_1.Transferencia],
     logging: true,
