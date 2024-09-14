@@ -1,10 +1,10 @@
 import {Request, Response} from 'express'
-import { GetPorductsServices } from '../servicio/ServicesProductos';
+import { getAllProductsServices } from '../servicio/ServicesProductos';
 
 
-export const GetAllProducts = async (req: Request, res: Response): Promise<Response> =>{
+export const getAllProducts = async (req: Request, res: Response): Promise<Response> =>{
     try {
-        const productos = await GetPorductsServices();
+        const productos = await getAllProductsServices();
         return res.status(200).json(productos);
 
     } catch (error) {

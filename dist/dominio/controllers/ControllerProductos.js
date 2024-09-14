@@ -9,11 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetAllProducts = void 0;
+exports.getAllProducts = void 0;
 const ServicesProductos_1 = require("../servicio/ServicesProductos");
-const GetAllProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const getAllProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const productos = yield (0, ServicesProductos_1.GetPorductsServices)();
+        const productos = yield (0, ServicesProductos_1.getAllProductsServices)();
         return res.status(200).json(productos);
     }
     catch (error) {
@@ -21,4 +21,4 @@ const GetAllProducts = (req, res) => __awaiter(void 0, void 0, void 0, function*
         return res.status(500).json('Internal Server Error');
     }
 });
-exports.GetAllProducts = GetAllProducts;
+exports.getAllProducts = getAllProducts;

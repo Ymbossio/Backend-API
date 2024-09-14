@@ -11,7 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateTransferenciasDB = exports.mapTransferenciaDataToModel = void 0;
 const transferencias_1 = require("../../model/transferencias");
-// Función para mapear TransferenciaData a las propiedades del modelo Sequelize
 const mapTransferenciaDataToModel = (data) => {
     return {
         transaction_id: data.transactionId,

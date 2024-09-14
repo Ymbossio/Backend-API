@@ -1,8 +1,7 @@
-import { QueryResult } from 'pg';
 import TransferenciaData from 'data';
 import { Transferencia } from '../../model/transferencias';
 
-// Función para mapear TransferenciaData a las propiedades del modelo Sequelize
+
 export const mapTransferenciaDataToModel = (data: TransferenciaData): any => {
     return {
         transaction_id: data.transactionId,

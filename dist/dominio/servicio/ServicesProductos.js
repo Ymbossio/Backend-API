@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetPorductsServices = void 0;
+exports.getAllProductsServices = void 0;
 const RepProductos_1 = require("../repositories/RepProductos");
-const GetPorductsServices = () => __awaiter(void 0, void 0, void 0, function* () {
-    return yield (0, RepProductos_1.getAllPorductsDB)();
+const getAllProductsServices = () => __awaiter(void 0, void 0, void 0, function* () {
+    return yield (0, RepProductos_1.getAllProductsDB)();
 });
-exports.GetPorductsServices = GetPorductsServices;
+exports.getAllProductsServices = getAllProductsServices;

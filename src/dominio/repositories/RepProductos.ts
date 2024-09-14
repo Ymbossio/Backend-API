@@ -1,6 +1,6 @@
 import {Producto} from '../../model/productos';
 
-export const getAllPorductsDB = async () => {
+export const getAllProductsDB = async () => {
   try {
     const productos = await Producto.findAll();
     return productos;

@@ -12,8 +12,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(router);
 app.use(product);
 
-
-
 const PORT = process.env.PORT_SERVER ?? 3000;
 
 async function startServer() {
@@ -24,6 +22,11 @@ async function startServer() {
     const server = app.listen(PORT, () => {
       console.log(`Servidor corriendo en el puerto ${PORT}`);
     });
+
+
+    app.get('/', (req, res)=>{
+      res.send('<h1>This server Run 🚀</h1>');
+    })
 
     return server;
   } catch (error) {

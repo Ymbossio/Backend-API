@@ -33,6 +33,9 @@ function startServer() {
             const server = app.listen(PORT, () => {
                 console.log(`Servidor corriendo en el puerto ${PORT}`);
             });
+            app.get('/', (req, res) => {
+                res.send('<h1>This server Run 🚀</h1>');
+            });
             return server;
         }
         catch (error) {

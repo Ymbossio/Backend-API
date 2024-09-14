@@ -1,16 +1,9 @@
 import {Request, Response} from 'express'
-import { QueryResult } from 'pg';
 import crypto from 'crypto';
+import { createTransferServices } from '../servicio/ServicesTransferencias';
 
 
-//importamos los servicios .
-import { CreateTransferServices } from '../servicio/ServicesTransferencias';
-
-interface Params {
-    id: string;
-}
-
-export const CreateRegister = async (req: Request, res: Response): Promise<Response> => {
+export const createTransfer = async (req: Request, res: Response): Promise<Response> => {
     const result = req.body;
 
     const transferenciaData = {
@@ -63,7 +56,7 @@ export const CreateRegister = async (req: Request, res: Response): Promise<Respo
 
         console.log(hashHex, "has");
 
-        const response = await CreateTransferServices(transferenciaData);
+        const response = await createTransferServices(transferenciaData);
         return res.json({ message: "Create successful!" });
        /* if(hashHex === hashHex){// Asegúrate de que la comparación sea correcta
         } else {

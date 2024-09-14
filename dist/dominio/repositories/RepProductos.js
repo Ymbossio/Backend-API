@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAllPorductsDB = void 0;
+exports.getAllProductsDB = void 0;
 const productos_1 = require("../../model/productos");
-const getAllPorductsDB = () => __awaiter(void 0, void 0, void 0, function* () {
+const getAllProductsDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const productos = yield productos_1.Producto.findAll();
         return productos;
@@ -20,4 +20,4 @@ const getAllPorductsDB = () => __awaiter(void 0, void 0, void 0, function* () {
         throw new Error('Error al obtener productos: ' + error);
     }
 });
-exports.getAllPorductsDB = getAllPorductsDB;
+exports.getAllProductsDB = getAllProductsDB;

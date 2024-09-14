@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateTransferServices = exports.mapTransferenciaDataToModel = void 0;
+exports.createTransferServices = exports.mapTransferenciaDataToModel = void 0;
 const RepTransferencias_1 = require("../repositories/RepTransferencias");
 // Función para mapear TransferenciaData a las propiedades del modelo Sequelize
 const mapTransferenciaDataToModel = (data) => {
@@ -54,7 +54,7 @@ const mapTransferenciaDataToModel = (data) => {
     };
 };
 exports.mapTransferenciaDataToModel = mapTransferenciaDataToModel;
-const CreateTransferServices = (data) => __awaiter(void 0, void 0, void 0, function* () {
+const createTransferServices = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         // Llamar a la función para crear la transferencia en la base de datos
         const transferencia = yield (0, RepTransferencias_1.CreateTransferenciasDB)(data);
@@ -65,4 +65,4 @@ const CreateTransferServices = (data) => __awaiter(void 0, void 0, void 0, funct
         throw error;
     }
 });
-exports.CreateTransferServices = CreateTransferServices;
+exports.createTransferServices = createTransferServices;

@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { CreateRegister } from "../dominio/controllers/ControllerTransferencias";
+import { createTransfer } from "../dominio/controllers/ControllerTransferencias";
 
 
 const router = Router();
 
-router.post('/transation', CreateRegister);
+router.post('/transaction', createTransfer);
 
 export default router;
 

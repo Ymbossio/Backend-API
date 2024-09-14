@@ -49,7 +49,7 @@ export const mapTransferenciaDataToModel = (data: TransferenciaData): any => {
 
 
 
-export const CreateTransferServices = async (data: TransferenciaData)=> {
+export const createTransferServices = async (data: TransferenciaData)=> {
 
     try {
       // Llamar a la función para crear la transferencia en la base de datos
