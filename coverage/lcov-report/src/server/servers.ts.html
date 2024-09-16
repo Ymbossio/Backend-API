@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80.95% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/21</span>
+                <span class='fraction'>9/21</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/20</span>
+                <span class='fraction'>8/20</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -114,34 +114,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,20 +155,20 @@ const PORT = process.env.PORT_SERVER ?? <span class="branch-1 cbranch-no" title=
 &nbsp;
 let server: Server | undefined; // Define server como opcional
 &nbsp;
-async function startServer(): Promise&lt;Server&gt; {
-  try {
+async function <span class="fstat-no" title="function not covered" >startServer(</span>): Promise&lt;Server&gt; {
+<span class="cstat-no" title="statement not covered" >  try {</span>
     // Sincroniza modelos
-    await sequelize.sync();
+<span class="cstat-no" title="statement not covered" >    await sequelize.sync();</span>
 &nbsp;
-    server = app.listen(PORT, () =&gt; {
-      console.log(`Servidor corriendo en el puerto ${PORT}`);
+<span class="cstat-no" title="statement not covered" >    server = app.listen(PORT, <span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      console.log(`Servidor corriendo en el puerto ${PORT}`);</span>
     });
 &nbsp;
-    app.get('/', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >    app.get('/', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >      res.send('&lt;h1&gt;This server Run 🚀&lt;/h1&gt;');</span>
     });
 &nbsp;
-    return server;
+<span class="cstat-no" title="statement not covered" >    return server;</span>
   } catch (error) {
 <span class="cstat-no" title="statement not covered" >    console.error('Error al conectar o sincronizar la base de datos:', error);</span>
 <span class="cstat-no" title="statement not covered" >    process.exit(1); </span>// Sale del proceso si hay un error
@@ -177,13 +177,13 @@ async function startServer(): Promise&lt;Server&gt; {
 &nbsp;
 const stopServer = (): Promise&lt;void&gt; =&gt; {
   return new Promise((resolve) =&gt; {
-    if (server) {
-      server.close(() =&gt; {
-        console.log('Servidor cerrado.');
-        resolve();
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (server) {
+<span class="cstat-no" title="statement not covered" >      server.close(<span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        console.log('Servidor cerrado.');</span>
+<span class="cstat-no" title="statement not covered" >        resolve();</span>
       });
-    } else <span class="missing-if-branch" title="else path not taken" >E</span>{
-<span class="cstat-no" title="statement not covered" >      resolve(); </span>// En caso de que `server` no esté definido, simplemente resuelve la promesa
+    } else {
+      resolve(); // En caso de que `server` no esté definido, simplemente resuelve la promesa
     }
   });
 };
@@ -196,7 +196,7 @@ export { startServer, stopServer };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-16T05:19:44.662Z
+                at 2024-09-16T07:02:39.555Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

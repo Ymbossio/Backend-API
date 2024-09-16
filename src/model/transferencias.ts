@@ -3,7 +3,7 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 @Table({ tableName: 'transferencias', timestamps: false })
 export class Transferencia extends Model<Transferencia> {
   @Column({
-    type: DataType.STRING, // Cambié de INTEGER a STRING porque tu ID parece ser alfanumérico
+    type: DataType.STRING,
     primaryKey: true,
     allowNull: true,
     field: 'transaction_id',
@@ -25,7 +25,7 @@ export class Transferencia extends Model<Transferencia> {
   finalized_at?: Date;
 
   @Column({
-    type: DataType.BIGINT, // Cambié de INTEGER a BIGINT para manejar grandes valores
+    type: DataType.BIGINT,
     allowNull: true,
     field: 'amount_in_cents',
   })
@@ -53,7 +53,7 @@ export class Transferencia extends Model<Transferencia> {
   payment_method_type!: string;
 
   @Column({
-    type: DataType.STRING, // Agrega más columnas según el JSON que recibes
+    type: DataType.STRING,
     allowNull: true,
     field: 'bin',
   })

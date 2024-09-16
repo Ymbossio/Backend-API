@@ -1,4 +1,4 @@
-interface TransferenciaData {
+interface transferData {
     transactionId?: number; // Puede ser opcional, pero debe coincidir con el tipo en el modelo Sequelize
     createdAt: Date;
     finalizedAt?: Date;
@@ -38,4 +38,4 @@ interface TransferenciaData {
     reference: string;
 }
 
-export default TransferenciaData;
+export default transferData;

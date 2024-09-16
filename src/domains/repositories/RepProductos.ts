@@ -1,10 +1,10 @@
-import {Producto} from '../../model/productos';
+import { Producto } from '../../model/productos';
 
 export const getAllProductsDB = async () => {
   try {
-    const productos = await Producto.findAll();
-    return productos;
+    const products = await Producto.findAll();
+    return products;
   } catch (error) {
-    throw new Error('Error al obtener productos: ' + error);
+    throw new Error('Error get all products: '+ error);
   }
 };

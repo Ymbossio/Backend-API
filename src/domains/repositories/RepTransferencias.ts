@@ -1,8 +1,8 @@
-import TransferenciaData from 'data';
+import transferData from 'data';
 import { Transferencia } from '../../model/transferencias';
 
 
-export const mapTransferenciaDataToModel = (data: TransferenciaData): any => {
+export const mapTransferData = (data: transferData): any => {
     return {
         transaction_id: data.transactionId,
         created_at: data.createdAt,
@@ -45,15 +45,14 @@ export const mapTransferenciaDataToModel = (data: TransferenciaData): any => {
 };
 
 
-export const CreateTransferenciasDB = async (data: TransferenciaData): Promise<Transferencia> => {
+export const CreateTransferDB = async (data: transferData): Promise<Transferencia> => {
     try {
-        // Mapea los datos para que coincidan con el modelo Sequelize
-        const mappedData = mapTransferenciaDataToModel(data);
 
-        // Crea la transferencia en la base de datos
-        const transferencia = await Transferencia.create(mappedData);
+        const mappedData = mapTransferData(data);
+        const transfer = await Transferencia.create(mappedData);
 
-        return transferencia;
+        return transfer;
+        
     } catch (error) {
         throw error;
     }

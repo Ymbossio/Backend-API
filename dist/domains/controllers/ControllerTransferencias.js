@@ -8,18 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createTransfer = void 0;
-const crypto_1 = __importDefault(require("crypto"));
-const ServicesTransferencias_1 = require("../servicio/ServicesTransferencias");
+const ServicesTransferencias_1 = require("../services/ServicesTransferencias");
 const createTransfer = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, _28, _29, _30, _31, _32, _33, _34, _35, _36, _37, _38, _39, _40, _41, _42, _43, _44, _45, _46, _47, _48, _49, _50, _51, _52, _53, _54, _55, _56, _57, _58, _59, _60, _61, _62, _63, _64, _65, _66, _67, _68, _69, _70, _71, _72, _73, _74, _75, _76, _77, _78, _79;
     const result = req.body;
     console.log(result);
-    const transferenciaData = {
+    const createData = {
         transactionId: (_b = (_a = result === null || result === void 0 ? void 0 : result.data) === null || _a === void 0 ? void 0 : _a.transaction) === null || _b === void 0 ? void 0 : _b.id,
         createdAt: (_d = (_c = result === null || result === void 0 ? void 0 : result.data) === null || _c === void 0 ? void 0 : _c.transaction) === null || _d === void 0 ? void 0 : _d.created_at,
         finalizedAt: (_f = (_e = result === null || result === void 0 ? void 0 : result.data) === null || _e === void 0 ? void 0 : _e.transaction) === null || _f === void 0 ? void 0 : _f.finalized_at,
@@ -59,20 +55,12 @@ const createTransfer = (req, res) => __awaiter(void 0, void 0, void 0, function*
         environment: result === null || result === void 0 ? void 0 : result.environment,
     };
     try {
-        // Validación de transferencia
-        //const validator = `${transferenciaData.transactionId}${transferenciaData.status}${transferenciaData.amountInCents}${transferenciaData.timestamp}${process.env.EVENT_INTEGRATIONII}`;
-        const validator = `${transferenciaData.transactionId}${transferenciaData.status}${transferenciaData.amountInCents}${transferenciaData.timestamp}${process.env.EVENT_INTEGRATION}`;
-        const hashHex = crypto_1.default.createHash('sha256').update(validator).digest('hex');
-        console.log(hashHex, "has");
-        const response = yield (0, ServicesTransferencias_1.createTransferServices)(transferenciaData);
-        return res.json({ message: "Create successful!" });
-        /* if(hashHex === hashHex){// Asegúrate de que la comparación sea correcta
-         } else {
-             return res.json({ success: false, message: "Checksum incorrect" });
-         }*/
+        const response = yield (0, ServicesTransferencias_1.createTransferServices)(createData);
+        return res.status(201).json({ message: "Create successful!" });
     }
     catch (error) {
-        throw error;
+        console.error('Error al crear transferencia:', error);
+        return res.status(500).json({ message: 'Internal server error' });
     }
 });
 exports.createTransfer = createTransfer;

@@ -16,7 +16,7 @@
     await sequelize.close(); // Cierra la conexión con la base de datos
   }, 20000);
 
-  describe('GET /productos', () => {
+  describe('GET /products', () => {
     test('should respond with a 200 status code', async () => {
       const response = await request(app).get('/productos');
       expect(response.status).toBe(200);

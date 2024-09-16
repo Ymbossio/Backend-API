@@ -16,7 +16,7 @@ let Transferencia = class Transferencia extends sequelize_typescript_1.Model {
 exports.Transferencia = Transferencia;
 __decorate([
     (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.STRING, // Cambié de INTEGER a STRING porque tu ID parece ser alfanumérico
+        type: sequelize_typescript_1.DataType.STRING,
         primaryKey: true,
         allowNull: true,
         field: 'transaction_id',
@@ -41,7 +41,7 @@ __decorate([
 ], Transferencia.prototype, "finalized_at", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.BIGINT, // Cambié de INTEGER a BIGINT para manejar grandes valores
+        type: sequelize_typescript_1.DataType.BIGINT,
         allowNull: true,
         field: 'amount_in_cents',
     }),
@@ -73,7 +73,7 @@ __decorate([
 ], Transferencia.prototype, "payment_method_type", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.STRING, // Agrega más columnas según el JSON que recibes
+        type: sequelize_typescript_1.DataType.STRING,
         allowNull: true,
         field: 'bin',
     }),

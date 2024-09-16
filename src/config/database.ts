@@ -12,7 +12,7 @@ const dialectOptions = process.env.NODE_ENV !== 'development'
     postgres: {
       ssl: {
         require: true,
-        rejectUnauthorized: false // Permitir certificados autofirmados
+        rejectUnauthorized: false
       }
     }
   }

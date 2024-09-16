@@ -55,11 +55,9 @@ const mapTransferenciaDataToModel = (data) => {
 exports.mapTransferenciaDataToModel = mapTransferenciaDataToModel;
 const CreateTransferenciasDB = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // Mapea los datos para que coincidan con el modelo Sequelize
         const mappedData = (0, exports.mapTransferenciaDataToModel)(data);
-        // Crea la transferencia en la base de datos
-        const transferencia = yield transferencias_1.Transferencia.create(mappedData);
-        return transferencia;
+        const transfer = yield transferencias_1.Transferencia.create(mappedData);
+        return transfer;
     }
     catch (error) {
         throw error;

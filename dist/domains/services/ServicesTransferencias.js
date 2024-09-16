@@ -13,12 +13,11 @@ exports.createTransferServices = void 0;
 const RepTransferencias_1 = require("../repositories/RepTransferencias");
 const createTransferServices = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // Llamar a la función para crear la transferencia en la base de datos
-        const transferencia = yield (0, RepTransferencias_1.CreateTransferenciasDB)(data);
-        return transferencia;
+        const transfer = yield (0, RepTransferencias_1.CreateTransferenciasDB)(data);
+        return transfer;
     }
     catch (error) {
-        console.error('Error en CreateTransferenciasDB:', error);
+        console.error('Error en CreateTransferDB:', error);
         throw error;
     }
 });

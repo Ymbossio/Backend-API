@@ -1,6 +1,5 @@
 import {Request, Response} from 'express'
-import crypto from 'crypto';
-import { createTransferServices } from '../servicio/ServicesTransferencias';
+import { createTransferServices } from '../services/ServicesTransferencias';
 
 
 export const createTransfer = async (req: Request, res: Response): Promise<Response> => {
@@ -8,7 +7,7 @@ export const createTransfer = async (req: Request, res: Response): Promise<Respo
 
     console.log(result);
     
-    const transferenciaData = {
+    const createData = {
         transactionId: result?.data?.transaction?.id,
         createdAt: result?.data?.transaction?.created_at,
         finalizedAt: result?.data?.transaction?.finalized_at,
@@ -50,21 +49,11 @@ export const createTransfer = async (req: Request, res: Response): Promise<Respo
     };
 
     try {
-        // Validación de transferencia
-        //const validator = `${transferenciaData.transactionId}${transferenciaData.status}${transferenciaData.amountInCents}${transferenciaData.timestamp}${process.env.EVENT_INTEGRATIONII}`;
-        const validator = `${transferenciaData.transactionId}${transferenciaData.status}${transferenciaData.amountInCents}${transferenciaData.timestamp}${process.env.EVENT_INTEGRATION}`;
-        
-        const hashHex = crypto.createHash('sha256').update(validator).digest('hex');
+        const response = await createTransferServices(createData);
+        return res.status(201).json({ message: "Create successful!" });
 
-        console.log(hashHex, "has");
-
-        const response = await createTransferServices(transferenciaData);
-        return res.json({ message: "Create successful!" });
-       /* if(hashHex === hashHex){// Asegúrate de que la comparación sea correcta
-        } else {
-            return res.json({ success: false, message: "Checksum incorrect" });
-        }*/
     } catch (error) {
-        throw error; 
+        console.error('Error al crear transferencia:', error);
+        return res.status(500).json({ message: 'Internal server error' }); 
     }
 };

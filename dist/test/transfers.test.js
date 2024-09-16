@@ -18,16 +18,27 @@ const index_1 = __importDefault(require("../index"));
 const database_1 = __importDefault(require("../config/database"));
 let server;
 beforeAll(() => __awaiter(void 0, void 0, void 0, function* () {
-    yield database_1.default.sync({ force: true }); // Sincroniza la base de datos
-    yield (0, servers_1.startServer)(); // Asegúrate de que el servidor esté en marcha
+    yield database_1.default.sync({ force: true }); // Sincroniza db
+    yield (0, servers_1.startServer)();
 }));
 afterAll(() => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, servers_1.stopServer)(); // Detén el servidor
     yield database_1.default.close(); // Cierra la conexión con la base de datos
-}), 20000);
-describe('GET /products', () => {
+}), 60000);
+describe('POST /transaction', () => {
     test('should respond with a 200 status code', () => __awaiter(void 0, void 0, void 0, function* () {
-        const response = yield (0, supertest_1.default)(index_1.default).get('/productos');
+        const nuevaTransfer = {
+            transaction_id: "193526-1711054232-47541",
+            amount_in_cents: 4590000,
+            reference: "SUETERS-BLACK-237868523-13-09-2024",
+            customer_email: "prueba-test@gmail.com",
+            currency: "COP",
+        };
+        const response = yield (0, supertest_1.default)(index_1.default)
+            .post('/transaction')
+            .send(nuevaTransfer)
+            .expect('Content-Type', /json/)
+            .expect(200);
         expect(response.status).toBe(200);
-    }));
+    }), 30000);
 });

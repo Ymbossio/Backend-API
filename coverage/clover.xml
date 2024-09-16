@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1726463984776" clover="3.2.0">
-  <project timestamp="1726463984776" name="All files">
-    <metrics statements="159" coveredstatements="120" conditionals="585" coveredconditionals="10" methods="23" coveredmethods="11" elements="767" coveredelements="141" complexity="0" loc="159" ncloc="159" packages="8" files="13" classes="13"/>
+<coverage generated="1726470159643" clover="3.2.0">
+  <project timestamp="1726470159644" name="All files">
+    <metrics statements="161" coveredstatements="106" conditionals="585" coveredconditionals="10" methods="24" coveredmethods="3" elements="770" coveredelements="119" complexity="0" loc="161" ncloc="161" packages="8" files="13" classes="13"/>
     <package name="src">
       <metrics statements="26" coveredstatements="16" conditionals="5" coveredconditionals="3" methods="3" coveredmethods="0"/>
       <file name="index.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\index.ts">
@@ -35,9 +35,9 @@
       </file>
     </package>
     <package name="src.config">
-      <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="3" methods="0" coveredmethods="0"/>
+      <metrics statements="12" coveredstatements="11" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="1"/>
       <file name="database.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\config\database.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="3" methods="0" coveredmethods="0"/>
+        <metrics statements="12" coveredstatements="11" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -46,23 +46,26 @@
         <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.domains.controllers">
-      <metrics statements="20" coveredstatements="8" conditionals="568" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <metrics statements="21" coveredstatements="5" conditionals="568" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="ControllerProductos.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\domains\controllers\ControllerProductos.ts">
-        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
       <file name="ControllerTransferencias.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\domains\controllers\ControllerTransferencias.ts">
-        <metrics statements="13" coveredstatements="3" conditionals="568" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="14" coveredstatements="3" conditionals="568" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -76,17 +79,18 @@
         <line num="61" count="0" type="stmt"/>
         <line num="62" count="0" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.domains.repositories">
-      <metrics statements="15" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+      <metrics statements="15" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
       <file name="RepProductos.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\domains\repositories\RepProductos.ts">
-        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>
       <file name="RepTransferencias.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\domains\repositories\RepTransferencias.ts">
@@ -103,24 +107,22 @@
       </file>
     </package>
     <package name="src.domains.servicio">
-      <metrics statements="12" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="ServicesProductos.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\domains\servicio\ServicesProductos.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
       </file>
       <file name="ServicesTransferencias.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\domains\servicio\ServicesTransferencias.ts">
-        <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.model">
@@ -199,28 +201,28 @@
       </file>
     </package>
     <package name="src.server">
-      <metrics statements="20" coveredstatements="16" conditionals="6" coveredconditionals="4" methods="6" coveredmethods="5"/>
+      <metrics statements="20" coveredstatements="8" conditionals="6" coveredconditionals="4" methods="6" coveredmethods="2"/>
       <file name="servers.ts" path="C:\Users\DELL\Desktop\Prueba\backend-ts\src\server\servers.ts">
-        <metrics statements="20" coveredstatements="16" conditionals="6" coveredconditionals="4" methods="6" coveredmethods="5"/>
+        <metrics statements="20" coveredstatements="8" conditionals="6" coveredconditionals="4" methods="6" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="cond" truecount="3" falsecount="1"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
       </file>
     </package>

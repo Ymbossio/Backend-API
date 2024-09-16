@@ -13,7 +13,7 @@ export class Producto extends Model<Producto> {
     type: DataType.STRING,
     allowNull: false,
   })
-  title!: string; // Cambiado de 'nombre' a 'title'
+  title!: string;
 
   @Column({
     type: DataType.FLOAT,
@@ -31,11 +31,11 @@ export class Producto extends Model<Producto> {
     type: DataType.STRING,
     allowNull: true,
   })
-  categoria?: string; // Añadido 'categoria'
+  categoria?: string;
 
   @Column({
     type: DataType.STRING,
     allowNull: true,
   })
-  imagen?: string; // Añadido 'imagen'
+  imagen?: string;
 }

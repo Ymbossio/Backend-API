@@ -9,17 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createTransferServices = void 0;
-const RepTransferencias_1 = require("../repositories/RepTransferencias");
-const createTransferServices = (data) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        // Llamar a la función para crear la transferencia en la base de datos
-        const transferencia = yield (0, RepTransferencias_1.CreateTransferenciasDB)(data);
-        return transferencia;
-    }
-    catch (error) {
-        console.error('Error en CreateTransferenciasDB:', error);
-        throw error;
-    }
+exports.getAllProductsServices = void 0;
+const RepProductos_1 = require("../repositories/RepProductos");
+const getAllProductsServices = () => __awaiter(void 0, void 0, void 0, function* () {
+    return yield (0, RepProductos_1.getAllProductsDB)();
 });
-exports.createTransferServices = createTransferServices;
+exports.getAllProductsServices = getAllProductsServices;

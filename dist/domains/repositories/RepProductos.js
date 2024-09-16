@@ -13,11 +13,11 @@ exports.getAllProductsDB = void 0;
 const productos_1 = require("../../model/productos");
 const getAllProductsDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const productos = yield productos_1.Producto.findAll();
-        return productos;
+        const products = yield productos_1.Producto.findAll();
+        return products;
     }
     catch (error) {
-        throw new Error('Error al obtener productos: ' + error);
+        throw new Error('Error get all products: ' + error);
     }
 });
 exports.getAllProductsDB = getAllProductsDB;

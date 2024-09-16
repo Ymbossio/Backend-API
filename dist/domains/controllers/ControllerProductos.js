@@ -10,11 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAllProducts = void 0;
-const ServicesProductos_1 = require("../servicio/ServicesProductos");
-const getAllProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const ServicesProductos_1 = require("../services/ServicesProductos");
+const getAllProducts = (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const productos = yield (0, ServicesProductos_1.getAllProductsServices)();
-        return res.status(200).json(productos);
+        const products = yield (0, ServicesProductos_1.getAllProductsServices)();
+        return res.status(200).json(products);
     }
     catch (error) {
         console.error(error);
