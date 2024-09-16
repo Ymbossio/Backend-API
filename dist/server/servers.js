@@ -13,17 +13,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.stopServer = void 0;
 exports.startServer = startServer;
-const index_1 = __importDefault(require("../src/index"));
-const database_1 = __importDefault(require("./config/database"));
+const database_1 = __importDefault(require("../config/database"));
+const index_1 = __importDefault(require("../index"));
 const PORT = (_a = process.env.PORT_SERVER) !== null && _a !== void 0 ? _a : 3000;
+let server; // Define server como opcional
 function startServer() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // Sincroniza modelos
             yield database_1.default.sync();
-            const server = index_1.default.listen(PORT, () => {
+            server = index_1.default.listen(PORT, () => {
                 console.log(`Servidor corriendo en el puerto ${PORT}`);
+            });
+            index_1.default.get('/', (req, res) => {
+                res.send('<h1>This server Run 🚀</h1>');
             });
             return server;
         }
@@ -33,6 +38,17 @@ function startServer() {
         }
     });
 }
-if (require.main === module) {
-    startServer();
-}
+const stopServer = () => {
+    return new Promise((resolve) => {
+        if (server) {
+            server.close(() => {
+                console.log('Servidor cerrado.');
+                resolve();
+            });
+        }
+        else {
+            resolve(); // En caso de que `server` no esté definido, simplemente resuelve la promesa
+        }
+    });
+};
+exports.stopServer = stopServer;

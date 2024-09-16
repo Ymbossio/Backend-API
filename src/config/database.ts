@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
-import { Producto } from '../model/productos';
+import  {Producto}  from '../model/productos';
 import { Transferencia } from '../model/transferencias';
 import * as dotenv from 'dotenv';
 
@@ -28,9 +28,8 @@ const sequelize = new Sequelize({
   database: process.env.NODE_DATABASE,
   dialectOptions: dialectOptions['postgres'] || {},
   models: [Producto, Transferencia],
-  logging: true,
+  logging: false,
 });
-
 
 
 export default sequelize;

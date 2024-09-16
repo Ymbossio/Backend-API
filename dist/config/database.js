@@ -48,6 +48,6 @@ const sequelize = new sequelize_typescript_1.Sequelize({
     database: process.env.NODE_DATABASE,
     dialectOptions: dialectOptions['postgres'] || {},
     models: [productos_1.Producto, transferencias_1.Transferencia],
-    logging: true,
+    logging: false,
 });
 exports.default = sequelize;

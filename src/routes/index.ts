@@ -1,6 +1,5 @@
 import { Router } from "express";
-import { createTransfer } from "../dominio/controllers/ControllerTransferencias";
-
+import { createTransfer } from "../domains/controllers/ControllerTransferencias";
 
 const router = Router();
 

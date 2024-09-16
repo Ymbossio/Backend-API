@@ -18,6 +18,8 @@ const index_1 = __importDefault(require("./routes/index"));
 const productos_1 = __importDefault(require("./routes/productos"));
 const cors_1 = __importDefault(require("cors"));
 const database_1 = __importDefault(require("./config/database"));
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.configDotenv)();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());

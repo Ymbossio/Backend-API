@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/config/database.ts</title>
+    <title>Code coverage report for src/server/server.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/config</a> database.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/server</a> server.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">46.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>7/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/6</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">46.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>7/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -94,88 +94,76 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Sequelize } from 'sequelize-typescript';
-import  {Producto}  from '../model/productos';
-import { Transferencia } from '../model/transferencias';
-import * as dotenv from 'dotenv';
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import sequelize from '../config/database';
+import app from '../index';
 &nbsp;
-dotenv.config();
 &nbsp;
-const port = process.env.NODE_PORT ? parseInt(process.env.NODE_PORT, 10) : <span class="branch-1 cbranch-no" title="branch not covered" >undefined;</span>
+const PORT = process.env.PORT_SERVER ?? <span class="branch-1 cbranch-no" title="branch not covered" >3000;</span>
 &nbsp;
-const dialectOptions = process.env.NODE_ENV !== 'development'
-  ? {
-    postgres: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false // Permitir certificados autofirmados
-      }
+async function startServer() {
+    try {
+      // Sincroniza modelos
+      await sequelize.sync();
+  
+      const server = <span class="cstat-no" title="statement not covered" >app.listen(PORT, <span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        console.log(`Servidor corriendo en el puerto ${PORT}`);</span>
+      });
+  
+  
+<span class="cstat-no" title="statement not covered" >      app.get('/', <span class="fstat-no" title="function not covered" >(r</span>eq, res)=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >        res.send('&lt;h1&gt;This server Run 🚀&lt;/h1&gt;');</span>
+      })
+  
+<span class="cstat-no" title="statement not covered" >      return server;</span>
+    } catch (error) {
+<span class="cstat-no" title="statement not covered" >      console.error('Error al conectar o sincronizar la base de datos:', error);</span>
+<span class="cstat-no" title="statement not covered" >      process.exit(1); </span>// Sale del proceso si hay un error
     }
   }
-  : <span class="branch-1 cbranch-no" title="branch not covered" >{}</span>
+  
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (require.main === module) {
+<span class="cstat-no" title="statement not covered" >    startServer();</span>
+  }
 &nbsp;
-&nbsp;
-const sequelize = new Sequelize({
-  dialect: process.env.NODE_DIALECT as 'postgres',  
-  host: process.env.NODE_HOST,
-  username: process.env.NODE_USER,
-  password: process.env.NODE_PASSWORD,
-  port: port,
-  database: process.env.NODE_DATABASE,
-  dialectOptions: dialectOptions['postgres'] || <span class="branch-1 cbranch-no" title="branch not covered" >{},</span>
-  models: [Producto, Transferencia],
-  logging: false,
-});
-&nbsp;
-&nbsp;
-export default sequelize;
-&nbsp;</pre></td></tr></table></pre>
+export default startServer;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-16T05:19:44.662Z
+                at 2024-09-15T23:46:33.551Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -3,6 +3,8 @@ import router from './routes/index';
 import product from './routes/productos';
 import cors from 'cors';
 import sequelize from './config/database';
+import { configDotenv } from 'dotenv';
+configDotenv();
 
 const app = express();
 

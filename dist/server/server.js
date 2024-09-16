@@ -11,23 +11,31 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
-const servers_1 = require("../server/servers");
-const supertest_1 = __importDefault(require("supertest"));
-const index_1 = __importDefault(require("../index"));
 const database_1 = __importDefault(require("../config/database"));
-let server;
-beforeAll(() => __awaiter(void 0, void 0, void 0, function* () {
-    yield database_1.default.sync({ force: true }); // Sincroniza la base de datos
-    yield (0, servers_1.startServer)(); // Asegúrate de que el servidor esté en marcha
-}));
-afterAll(() => __awaiter(void 0, void 0, void 0, function* () {
-    yield (0, servers_1.stopServer)(); // Detén el servidor
-    yield database_1.default.close(); // Cierra la conexión con la base de datos
-}), 20000);
-describe('GET /productos', () => {
-    test('should respond with a 200 status code', () => __awaiter(void 0, void 0, void 0, function* () {
-        const response = yield (0, supertest_1.default)(index_1.default).get('/productos');
-        expect(response.status).toBe(200);
-    }));
-});
+const index_1 = __importDefault(require("../index"));
+const PORT = (_a = process.env.PORT_SERVER) !== null && _a !== void 0 ? _a : 3000;
+function startServer() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            // Sincroniza modelos
+            yield database_1.default.sync();
+            const server = index_1.default.listen(PORT, () => {
+                console.log(`Servidor corriendo en el puerto ${PORT}`);
+            });
+            index_1.default.get('/', (req, res) => {
+                res.send('<h1>This server Run 🚀</h1>');
+            });
+            return server;
+        }
+        catch (error) {
+            console.error('Error al conectar o sincronizar la base de datos:', error);
+            process.exit(1); // Sale del proceso si hay un error
+        }
+    });
+}
+if (require.main === module) {
+    startServer();
+}
+exports.default = startServer;
